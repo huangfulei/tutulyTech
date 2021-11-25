@@ -7,18 +7,17 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react";
-import {
-  IoAnalyticsSharp,
-  IoLogoBitcoin,
-  IoSearchSharp,
-} from "react-icons/io5";
+import { CgWebsite } from "react-icons/cg";
+import { GrOptimize } from "react-icons/gr";
+import { FcAdvertising } from "react-icons/fc";
+
 import { Service } from "./Service";
 
 interface ServicesProps {}
 
 const Services: React.FC<ServicesProps> = (props) => {
   return (
-    <Container maxW={"5xl"} py={16}>
+    <Container maxW={"5xl"} py={4}>
       <Stack spacing={4}>
         <Heading>End to end solutions</Heading>
         <Text color={"gray.500"} fontSize={"lg"}>
@@ -34,21 +33,19 @@ const Services: React.FC<ServicesProps> = (props) => {
           }
         >
           <Service
-            icon={
-              <Icon as={IoAnalyticsSharp} color={"yellow.500"} w={5} h={5} />
-            }
+            icon={<Icon as={CgWebsite} color={"yellow.500"} w={5} h={5} />}
             iconBg={useColorModeValue("yellow.100", "yellow.900")}
-            text={"Business Planning"}
+            text={"Build your site"}
           />
           <Service
-            icon={<Icon as={IoLogoBitcoin} color={"green.500"} w={5} h={5} />}
+            icon={<Icon as={GrOptimize} color={"green.500"} w={5} h={5} />}
             iconBg={useColorModeValue("green.100", "green.900")}
-            text={"Financial Planning"}
+            text={"SEO optimization"}
           />
           <Service
-            icon={<Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />}
+            icon={<Icon as={FcAdvertising} color={"purple.500"} w={5} h={5} />}
             iconBg={useColorModeValue("purple.100", "purple.900")}
-            text={"Market Analysis"}
+            text={"Digital marketing"}
           />
         </Stack>
       </Stack>

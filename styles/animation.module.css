@@ -42,8 +42,8 @@
 }
 
 .jello-horizontal {
-  -webkit-animation: jello-horizontal 0.9s both;
-  animation: jello-horizontal 0.9s both;
+  -webkit-animation: jello-horizontal 1.5s both;
+  animation: jello-horizontal 1.5s both;
 }
 
 /* ----------------------------------------------
