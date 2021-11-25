@@ -6,7 +6,6 @@ import {
   useDisclosure,
   IconButton,
   useColorModeValue,
-  Icon,
   useColorMode,
   Heading,
 } from "@chakra-ui/react";
@@ -62,6 +61,7 @@ export const Header = () => {
             />
           </Flex>
 
+          {/* company logo and name */}
           <Flex
             flex={{ base: 1, md: "auto" }}
             justify={{ base: "start", md: "start" }}
@@ -73,18 +73,19 @@ export const Header = () => {
                 alignItems={"center"}
                 spacing={{ base: 2, sm: 4 }}
               >
-                {/* <Icon as={Logo} w={{ base: 8 }} h={{ base: 8 }} /> */}
+                {/* todo: add logo */}
                 <Heading
                   as={"h1"}
                   fontSize={"xl"}
                   display={{ base: "none", md: "block" }}
                 >
-                  {/* <TextUnderline>Chakra</TextUnderline> Templates */}
+                  TutulyTech
                 </Heading>
               </Stack>
             </Link>
           </Flex>
 
+          {/* menu nav */}
           <Stack
             direction={"row"}
             align={"center"}

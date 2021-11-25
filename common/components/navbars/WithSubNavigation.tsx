@@ -22,7 +22,7 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import { NAV_ITEMS } from "../../consts/NAV_ITEMS";
+import { NAV_ITEMS } from "../../consts/constants";
 import { NavItem } from "../../types/NavItem";
 
 export default function WithSubNavigation() {

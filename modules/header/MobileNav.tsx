@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import { NAV_ITEMS } from "../../common/consts/NAV_ITEMS";
+import { NAV_ITEMS } from "../../common/consts/constants";
 import { NavItem } from "../../common/types/NavItem";
 
 interface MobileNavProps {

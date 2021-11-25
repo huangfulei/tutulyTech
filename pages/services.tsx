@@ -17,45 +17,40 @@ import Carousel from "../common/components/carousels/Carousel";
 import WithSubNavigation from "../common/components/navbars/WithSubNavigation";
 import SidebarWithHeader from "../common/components/navbars/SidebarWithHeader";
 import Contact from "../common/components/contact/Contact";
+import { AppLayout } from "../modules/AppLayout";
+import { SEO } from "../common/components/SEO";
 
 interface ServicesProps {}
 
 const Services: React.FC<ServicesProps> = () => {
   return (
-    <div>
-      <Head>
-        <title>Tutuly Tech</title>
-        <meta name="keywords" content="development" />
-      </Head>
-      <Box>
-        <Text>Features</Text>
-        <SplitWithImage />
-        <SimpleThreeColumns />
-        <GridListWithHeading />
-        <Text>Footers</Text>
-        <LargeWithAppLinksAndSocial />
-        <LargeWithLogoLeft />
-        <LargeWithNewsletter />
-        <LargeWithLogoCentered />
-        <Text>Testimonials</Text>
-        <GridBlurredBackdrop />
-        <WithSpeechBubbles />
-        <Text>Pricing</Text>
-        <ThreeTierPricing />
-        <Text>Statistics</Text>
-        <BasicStatistics />
-        <StatisticsWithIcon />
-        <Text>Carousel</Text>
-        <Carousel />
-        <Text>Nav Bar</Text>
-        <WithSubNavigation />
-        <SidebarWithHeader
-          {...{ children: <Text>place holder element</Text> }}
-        />
-        <Text>Contact</Text>
-        <Contact />
-      </Box>
-    </div>
+    <AppLayout>
+      <SEO />
+      <Text>Features</Text>
+      
+      <SimpleThreeColumns />
+      <GridListWithHeading />
+      <Text>Footers</Text>
+      <LargeWithAppLinksAndSocial />
+      <LargeWithLogoLeft />
+      <LargeWithNewsletter />
+      <LargeWithLogoCentered />
+      <Text>Testimonials</Text>
+      <GridBlurredBackdrop />
+      <WithSpeechBubbles />
+      <Text>Pricing</Text>
+      <ThreeTierPricing />
+      <Text>Statistics</Text>
+      <BasicStatistics />
+      <StatisticsWithIcon />
+      <Text>Carousel</Text>
+      <Carousel />
+      <Text>Nav Bar</Text>
+      <WithSubNavigation />
+      <SidebarWithHeader {...{ children: <Text>place holder element</Text> }} />
+      <Text>Contact</Text>
+      <Contact />
+    </AppLayout>
   );
 };
 

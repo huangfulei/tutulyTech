@@ -14,7 +14,7 @@ import {
 import NextLink from "next/link";
 
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { NAV_ITEMS } from "../../common/consts/NAV_ITEMS";
+import { NAV_ITEMS } from "../../common/consts/constants";
 import { NavItem } from "../../common/types/NavItem";
 
 export const DesktopNav = (props: BoxProps) => {

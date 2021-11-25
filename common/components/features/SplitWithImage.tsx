@@ -23,7 +23,7 @@ interface FeatureProps {
   icon?: ReactElement;
 }
 
-export const Feature = ({ text, icon, iconBg }: FeatureProps) => {
+const Feature = ({ text, icon, iconBg }: FeatureProps) => {
   return (
     <Stack direction={"row"} align={"center"}>
       <Flex
@@ -43,10 +43,10 @@ export const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export function SplitWithImage() {
   return (
-    <Container maxW={"5xl"} py={12}>
+    <Container maxW={"5xl"} py={16}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
-          <Text
+          {/* <Text
             textTransform={"uppercase"}
             color={"blue.400"}
             fontWeight={600}
@@ -57,11 +57,13 @@ export function SplitWithImage() {
             rounded={"md"}
           >
             Our Story
-          </Text>
-          <Heading>A digital Product design agency</Heading>
+          </Text> */}
+          <Heading>The only developer you need!</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore
+            Hi! I'm Fulei Huang, a full stack software engineer currently
+            working for Microsoft. Glad you find me here. I'm providing top tier
+            software services, and full solutions for building and promoting
+            your website.
           </Text>
           <Stack
             spacing={4}
