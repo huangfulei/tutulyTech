@@ -32,7 +32,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
         >
           <Heading
             fontWeight={600}
-            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+            fontSize={{ base: "4xl", md: "6xl" }}
             lineHeight={"110%"}
           >
             You deserve a <br />
@@ -40,7 +40,10 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
               better website
             </Text>
           </Heading>
-          <Text fontSize="2xl" className={animation["bounce-in-top"]}>
+          <Text
+            fontSize={{ base: "xl", md: "2xl" }}
+            className={animation["bounce-in-top"]}
+          >
             Hi! I’m Fulei Huang, a full stack software engineer currently
             working for Microsoft. Glad you find me here. I’m providing top tier
             software services, and full solutions for building and promoting
