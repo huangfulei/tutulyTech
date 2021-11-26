@@ -27,7 +27,7 @@ export const Header = () => {
         pos="fixed"
         top="0"
         w={"full"}
-        minH={"60px"}
+        minH={16}
         boxShadow={"sm"}
         zIndex="999"
         justify={"center"}

@@ -24,20 +24,20 @@ export const DesktopNav = (props: BoxProps) => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <NextLink href={navItem.href ?? "#"} passHref={true}>
-                <Link
-                  p={2}
-                  fontSize={"sm"}
-                  fontWeight={500}
-                  color={useColorModeValue("gray.600", "gray.200")}
-                  _hover={{
-                    textDecoration: "none",
-                    color: useColorModeValue("gray.800", "white"),
-                  }}
-                >
+              <Link
+                p={2}
+                fontSize={"sm"}
+                fontWeight={500}
+                color={useColorModeValue("gray.600", "gray.200")}
+                _hover={{
+                  textDecoration: "none",
+                  color: useColorModeValue("gray.800", "white"),
+                }}
+              >
+                <NextLink href={navItem.href ?? "#"} passHref>
                   {navItem.label}
-                </Link>
-              </NextLink>
+                </NextLink>
+              </Link>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -65,14 +65,14 @@ export const DesktopNav = (props: BoxProps) => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <NextLink href={href!} passHref={true}>
-      <Link
-        role={"group"}
-        display={"block"}
-        p={2}
-        rounded={"md"}
-        _hover={{ bg: useColorModeValue("green.50", "gray.900") }}
-      >
+    <Link
+      role={"group"}
+      display={"block"}
+      p={2}
+      rounded={"md"}
+      _hover={{ bg: useColorModeValue("green.50", "gray.900") }}
+    >
+      <NextLink href={href!} passHref={true}>
         <Stack direction={"row"} align={"center"}>
           <Box>
             <Text
@@ -96,7 +96,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
             <Icon color={"green.400"} w={5} h={5} as={ChevronRightIcon} />
           </Flex>
         </Stack>
-      </Link>
-    </NextLink>
+      </NextLink>
+    </Link>
   );
 };

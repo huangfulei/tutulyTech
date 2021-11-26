@@ -34,7 +34,7 @@ const Quote: React.FunctionComponent<QuoteProps> = () => {
   return (
     <AppLayout>
       <SEO />
-      <Container maxW="5xl" mt={16}>
+      <Container maxW="5xl" my={16}>
         <form onSubmit={handleSubmit}>
           <Heading textAlign="center" pb={6}>
             Get a Quote
@@ -65,7 +65,7 @@ const Quote: React.FunctionComponent<QuoteProps> = () => {
             <FormControl isRequired>
               <FormLabel>Type of website</FormLabel>
               <Select
-                placeholder="Select website type"
+                placeholder="Select"
                 value={websiteType}
                 onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
                   setWebsiteType(event.target.value);

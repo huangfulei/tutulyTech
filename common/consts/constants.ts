@@ -7,23 +7,24 @@ export const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Services",
-    children: [
-      {
-        label: "Info Site",
-        subLabel: "Static website",
-        href: "/services",
-      },
-      {
-        label: "E-Commerce",
-        subLabel: "E-Commerce site",
-        href: "/e-commerce",
-      },
-      {
-        label: "Functional",
-        subLabel: "custom functional site",
-        href: "/custom-site",
-      },
-    ],
+    href: "/services",
+    // children: [
+    //   {
+    //     label: "Info Site",
+    //     subLabel: "Static website",
+    //     href: "/services",
+    //   },
+    //   {
+    //     label: "E-Commerce",
+    //     subLabel: "E-Commerce site",
+    //     href: "/e-commerce",
+    //   },
+    //   {
+    //     label: "Functional",
+    //     subLabel: "custom functional site",
+    //     href: "/custom-site",
+    //   },
+    // ],
   },
   {
     label: "Get A Quote",

@@ -17,10 +17,9 @@ export const Footer = () => {
       justifyContent="center"
       alignItems="center"
       w="100%"
+      minH={16}
     >
-      <Text py={6} fontSize={"sm"}>
-        Copyright 2021 @ TutulyTech
-      </Text>
+      <Text fontSize={"sm"}>Copyright 2021 @ TutulyTech</Text>
     </Flex>
   );
 };
