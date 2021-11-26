@@ -24,20 +24,20 @@ export const DesktopNav = (props: BoxProps) => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={useColorModeValue("gray.600", "gray.200")}
-                _hover={{
-                  textDecoration: "none",
-                  color: useColorModeValue("gray.800", "white"),
-                }}
-              >
-                <NextLink href={navItem.href ?? "#"} passHref>
+              <NextLink href={navItem.href ?? "#"} passHref={true}>
+                <Link
+                  p={2}
+                  fontSize={"sm"}
+                  fontWeight={500}
+                  color={useColorModeValue("gray.600", "gray.200")}
+                  _hover={{
+                    textDecoration: "none",
+                    color: useColorModeValue("gray.800", "white"),
+                  }}
+                >
                   {navItem.label}
-                </NextLink>
-              </Link>
+                </Link>
+              </NextLink>
             </PopoverTrigger>
 
             {navItem.children && (

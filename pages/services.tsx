@@ -1,7 +1,4 @@
-import * as React from "react";
-import Head from "next/head";
-import { SplitWithImage } from "../common/components/features/SplitWithImage";
-import { Box, Flex, Text, VStack } from "@chakra-ui/layout";
+import { Text } from "@chakra-ui/layout";
 import LargeWithAppLinksAndSocial from "../common/components/footers/LargeWithAppLinksAndSocial";
 import LargeWithLogoLeft from "../common/components/footers/LargeWithLogoLeft";
 import LargeWithNewsletter from "../common/components/footers/LargeWithNewsletter";
@@ -27,7 +24,6 @@ const Services: React.FC<ServicesProps> = () => {
     <AppLayout>
       <SEO />
       <Text>Features</Text>
-      
       <SimpleThreeColumns />
       <GridListWithHeading />
       <Text>Footers</Text>
