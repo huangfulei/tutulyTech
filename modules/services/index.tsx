@@ -21,8 +21,8 @@ const Services: React.FC<ServicesProps> = (props) => {
       <Stack spacing={4}>
         <Heading>End to end solutions</Heading>
         <Text color={"gray.500"} fontSize={"lg"}>
-          I'm providing top tier software services, and full solutions for
-          building and promoting your website.
+          I will take care of everything from site building to site promotion,
+          and make sure your website is really working for you.
         </Text>
         <Stack
           spacing={4}
@@ -35,17 +35,38 @@ const Services: React.FC<ServicesProps> = (props) => {
           <Service
             icon={<Icon as={CgWebsite} color={"yellow.500"} w={5} h={5} />}
             iconBg={useColorModeValue("yellow.100", "yellow.900")}
-            text={"Build your site"}
+            name={"Build your site"}
+            features={[
+              "mobile friendly",
+              "fast",
+              "reliable",
+              "beautiful",
+              "easy to customize",
+              "accessible",
+            ]}
           />
           <Service
             icon={<Icon as={GrOptimize} color={"green.500"} w={5} h={5} />}
             iconBg={useColorModeValue("green.100", "green.900")}
-            text={"SEO optimization"}
+            name={"SEO optimization"}
+            features={[
+              "fast load",
+              "interliked pages",
+              "key words optimization",
+              "SSL secure",
+            ]}
           />
           <Service
             icon={<Icon as={FcAdvertising} color={"purple.500"} w={5} h={5} />}
             iconBg={useColorModeValue("purple.100", "purple.900")}
-            text={"Digital marketing"}
+            name={"Digital marketing"}
+            features={[
+              "google ad",
+              "facebook ad",
+              "tik tok ad",
+              "social media integration",
+              "google analytics",
+            ]}
           />
         </Stack>
       </Stack>
