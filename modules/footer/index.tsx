@@ -13,25 +13,6 @@ import NextLink from "next/link";
 import NextImage from "next/image";
 import { ReactNode } from "react";
 
-const SOCIAL_LINKS = [
-  {
-    label: "Discord Community",
-    href: "/",
-  },
-  {
-    label: "GitHub Repository",
-    href: "/",
-  },
-  {
-    label: "Twitter Account",
-    href: "/",
-  },
-  {
-    label: "Figma Design Resources",
-    href: "/",
-  },
-];
-
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
     <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
@@ -47,7 +28,7 @@ export const Footer = () => {
       color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container as={Stack} maxW={"6xl"} py={10}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+        {/* <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={"flex-start"}>
             <ListHeader>Templates</ListHeader>
           </Stack>
@@ -60,19 +41,7 @@ export const Footer = () => {
               </Link>
             ))}
           </Stack>
-
-          {/* <Stack align={"flex-start"}>
-            <ListHeader>Support us</ListHeader>
-            <Link href={"/"}>
-              <NextImage
-                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                alt="Buy Me A Coffee"
-                height={40}
-                width={142.47}
-              />
-            </Link>
-          </Stack> */}
-        </SimpleGrid>
+        </SimpleGrid> */}
       </Container>
       <Box pb={10}>
         <Flex
@@ -99,8 +68,7 @@ export const Footer = () => {
           </NextLink>
         </Flex>
         <Text pt={6} fontSize={"sm"} textAlign={"center"}>
-          Made on the Internet by <Link href={"/"}>Achim Rolle</Link> and{" "}
-          <Link href={"/"}>Contributors</Link>
+          Copyright 2021 @ TutulyTech
         </Text>
       </Box>
     </Box>
