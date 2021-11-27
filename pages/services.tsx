@@ -4,6 +4,7 @@ import {
   Stack,
   HStack,
   Heading,
+  Divider,
   Text,
   VStack,
   useColorModeValue,
@@ -43,8 +44,7 @@ const Services: React.FC<ServicesProps> = () => {
             Services that fit your need
           </Heading>
           <Text fontSize="lg" color={"gray.500"}>
-            Start with 14-day free trial. No credit card needed. Cancel at
-            anytime.
+            All services are provided with top standard and quality.
           </Text>
         </VStack>
         <Stack
@@ -57,17 +57,14 @@ const Services: React.FC<ServicesProps> = () => {
           <PriceWrapper>
             <Box py={4} px={12}>
               <Text fontWeight="500" fontSize="2xl">
-                Hobby
+                Static Website
               </Text>
               <HStack justifyContent="center">
                 <Text fontSize="3xl" fontWeight="600">
-                  $
+                  Start from
                 </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                  79
-                </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /month
+                <Text fontSize="4xl" fontWeight="900">
+                  €459
                 </Text>
               </HStack>
             </Box>
@@ -75,32 +72,58 @@ const Services: React.FC<ServicesProps> = () => {
               bg={useColorModeValue("gray.50", "gray.700")}
               py={4}
               borderBottomRadius={"xl"}
+              alignItems="flex-start"
             >
+              <Text fontSize="2xl" fontWeight="900" alignSelf="center">
+                Suitable for
+              </Text>
               <List spacing={3} textAlign="start" px={12}>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  unlimited build minutes
+                  Information display
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  Lorem, ipsum dolor.
+                  Simple features like booking and email
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
+                  No frequent update required
                 </ListItem>
               </List>
-              {/* <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="red" variant="outline">
-                  Start trial
-                </Button>
-              </Box> */}
+              <Divider />
+
+              <Text fontSize="2xl" fontWeight="900" alignSelf="center">
+                What you will get
+              </Text>
+              <List spacing={3} textAlign="start" px={12}>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Free ssl(for website security)
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Fast host server
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Optimized SEO(Search Engine Optimization)
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Free domain for 1 years
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Client portal
+                </ListItem>
+              </List>
             </VStack>
           </PriceWrapper>
 
           <PriceWrapper>
             <Box position="relative">
-              <Box
+              {/* <Box
                 position="absolute"
                 top="-16px"
                 left="50%"
@@ -118,20 +141,17 @@ const Services: React.FC<ServicesProps> = () => {
                 >
                   Most Popular
                 </Text>
-              </Box>
+              </Box> */}
               <Box py={4} px={12}>
                 <Text fontWeight="500" fontSize="2xl">
-                  Growth
+                  E-Commerce
                 </Text>
                 <HStack justifyContent="center">
                   <Text fontSize="3xl" fontWeight="600">
-                    $
+                    Start from
                   </Text>
-                  <Text fontSize="5xl" fontWeight="900">
-                    149
-                  </Text>
-                  <Text fontSize="3xl" color="gray.500">
-                    /month
+                  <Text fontSize="4xl" fontWeight="900">
+                    €959
                   </Text>
                 </HStack>
               </Box>
@@ -139,51 +159,63 @@ const Services: React.FC<ServicesProps> = () => {
                 bg={useColorModeValue("gray.50", "gray.700")}
                 py={4}
                 borderBottomRadius={"xl"}
+                alignItems="flex-start"
               >
+                <Text fontSize="2xl" fontWeight="900" alignSelf="center">
+                  Suitable for
+                </Text>
                 <List spacing={3} textAlign="start" px={12}>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
-                    unlimited build minutes
+                    Information display
                   </ListItem>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
-                    Lorem, ipsum dolor.
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon as={FaCheckCircle} color="green.500" />
-                    5TB Lorem, ipsum dolor.
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon as={FaCheckCircle} color="green.500" />
-                    5TB Lorem, ipsum dolor.
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon as={FaCheckCircle} color="green.500" />
-                    5TB Lorem, ipsum dolor.
+                    Selling products or services online
                   </ListItem>
                 </List>
-                {/* <Box w="80%" pt={7}>
-                  <Button w="full" colorScheme="red">
-                    Start trial
-                  </Button>
-                </Box> */}
+                <Divider />
+
+                <Text fontSize="2xl" fontWeight="900" alignSelf="center">
+                  What you will get
+                </Text>
+                <List spacing={3} textAlign="start" px={12}>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    Free ssl(for website security)
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    Fast host server
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    Optimized SEO(Search Engine Optimization)
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    Free domain for 1 years
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    Ability to take payment online
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    Client portal
+                  </ListItem>
+                </List>
               </VStack>
             </Box>
           </PriceWrapper>
           <PriceWrapper>
             <Box py={4} px={12}>
               <Text fontWeight="500" fontSize="2xl">
-                Scale
+                Custom site
               </Text>
               <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
-                  $
-                </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                  349
-                </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /month
+                <Text fontSize="4xl" fontWeight="900">
+                  €1+
                 </Text>
               </HStack>
             </Box>
@@ -191,26 +223,60 @@ const Services: React.FC<ServicesProps> = () => {
               bg={useColorModeValue("gray.50", "gray.700")}
               py={4}
               borderBottomRadius={"xl"}
+              alignItems="flex-start"
             >
+              <Text fontSize="2xl" fontWeight="900" alignSelf="center">
+                Suitable for
+              </Text>
               <List spacing={3} textAlign="start" px={12}>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  unlimited build minutes
+                  Information display
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  Lorem, ipsum dolor.
+                  Selling products or services online
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
+                  Any other custom features
                 </ListItem>
               </List>
-              {/* <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="red" variant="outline">
-                  Start trial
-                </Button>
-              </Box> */}
+              <Divider />
+
+              <Text fontSize="2xl" fontWeight="900" alignSelf="center">
+                What you will get
+              </Text>
+              <List spacing={3} textAlign="start" px={12}>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Free ssl(for website security)
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Fast host server
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Optimized SEO(Search Engine Optimization)
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Free domain for 1 years
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Whatever features you required
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Fully customizable website or app
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Source code
+                </ListItem>
+              </List>
             </VStack>
           </PriceWrapper>
         </Stack>
