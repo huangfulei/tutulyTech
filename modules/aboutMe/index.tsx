@@ -68,7 +68,9 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
               size={"md"}
               className={animation["roll-in-blurred-left"]}
             >
-              All Services
+              <NextLink href={"/services" ?? "#"} passHref>
+                All Services
+              </NextLink>
             </Button>
           </Stack>
         </Stack>

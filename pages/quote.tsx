@@ -7,6 +7,7 @@ import {
   HStack,
   VStack,
   FormControl,
+  useToast,
   NumberInputField,
   Heading,
   Input,
@@ -15,6 +16,10 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+
+init("user_FcPqoMVI30q28ocakFyfQ");
 
 const websiteTypes = ["Static info display", "E-commerce", "Custom webapp"];
 interface QuoteProps {}
@@ -26,10 +31,44 @@ const Quote: React.FunctionComponent<QuoteProps> = () => {
   const [websiteType, setWebsiteType] = useState<string>();
   const [timeRequired, setTimeRequired] = useState<string>();
   const [desc, setDesc] = useState<string>();
+  const toast = useToast();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     console.log("submitted");
+    emailjs
+      .send("service_4l8d3gr", "template_zgacpbf", {
+        from_name: name,
+        email: email,
+        budget: budget,
+        websiteType: websiteType,
+        timeRequired: timeRequired,
+        message: desc,
+        reply_to: email,
+      })
+      .then((response) => {
+        toast({
+          title: `Submitted!`,
+          status: "success",
+          isClosable: true,
+        });
+      })
+      .catch((error) => {
+        toast({
+          title: `${error}`,
+          status: "error",
+          isClosable: true,
+        });
+      })
+      .finally(() => {
+        setName(undefined);
+        setEmail(undefined);
+        setBudget(undefined);
+        setWebsiteType(undefined);
+        setTimeRequired(undefined);
+        setDesc(undefined);
+      });
   };
   return (
     <AppLayout>
