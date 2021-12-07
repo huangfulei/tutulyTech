@@ -30,6 +30,10 @@ export const NAV_ITEMS: Array<NavItem> = [
     label: "Get A Quote",
     href: "/quote",
   },
+  {
+    label: "Demo",
+    href: "/demo",
+  },
 ];
 
 /**
