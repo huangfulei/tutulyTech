@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
-
-import { Header } from "./header";
-import { Footer } from "./footer";
+import Navbar from "../common/components/nav/Navbar";
+import Footer from "./../common/components/footer/Footer";
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -10,7 +9,7 @@ interface AppLayoutProps {
 export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <>
-      <Header />
+      <Navbar />
       {children}
       <Footer />
     </>
