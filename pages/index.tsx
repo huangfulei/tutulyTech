@@ -1,29 +1,25 @@
 import { getDownloadURL, ref } from "firebase/storage";
+import { GetStaticProps } from "next";
 import ReactTypingEffect from "react-typing-effect";
 import { storage } from "../firebase/clientApp";
 import { CounterUp } from "./../common/components/elements/Counterup";
 import { Slider1 } from "./../common/components/elements/Slider1";
 import { Layout } from "./../common/components/layouts/Layout";
-import { useEffect } from "react";
 
-interface HomeProps {}
+interface HomeProps {
+  url: string;
+}
 
 const Home: React.FC<HomeProps> = (props) => {
-  useEffect(() => {
-    async () => {
-      const imagesRef = ref(storage, "pomotrack.jpg");
-      const url = await getDownloadURL(imagesRef);
+  const { url } = props;
 
-      console.log("imagesRef: ", url);
-    };
-  }, []);
   return (
     <>
       <Layout>
         <section
           className="xl:bg-contain bg-top bg-no-repeat -mt-24 pt-24"
           style={{
-            backgroundImage: "url('assets/imgs/backgrounds/intersect.svg')",
+            backgroundImage: url,
           }}
         >
           <div className="container px-4 mx-auto">
@@ -80,7 +76,7 @@ const Home: React.FC<HomeProps> = (props) => {
             >
               <img
                 className="jump rounded wow animate__animated animate__fadeIn"
-                src="/assets/imgs/placeholders/dashboard.png"
+                src={url}
                 alt="Image"
               />
             </div>
@@ -880,6 +876,16 @@ const Home: React.FC<HomeProps> = (props) => {
       </Layout>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const imagesRef = ref(storage, "pomotrack.jpg");
+  const url = await getDownloadURL(imagesRef);
+
+  return {
+    props: { url }, // will be passed to the page component as props
+    revalidate: 3, // In 3 seconds
+  };
 };
 
 export default Home;
