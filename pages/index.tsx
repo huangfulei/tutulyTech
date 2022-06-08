@@ -1,11 +1,22 @@
+import { getDownloadURL, ref } from "firebase/storage";
 import ReactTypingEffect from "react-typing-effect";
+import { storage } from "../firebase/clientApp";
 import { CounterUp } from "./../common/components/elements/Counterup";
 import { Slider1 } from "./../common/components/elements/Slider1";
 import { Layout } from "./../common/components/layouts/Layout";
+import { useEffect } from "react";
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = (props) => {
+  useEffect(() => {
+    async () => {
+      const imagesRef = ref(storage, "pomotrack.jpg");
+      const url = await getDownloadURL(imagesRef);
+
+      console.log("imagesRef: ", url);
+    };
+  }, []);
   return (
     <>
       <Layout>
@@ -21,9 +32,9 @@ const Home: React.FC<HomeProps> = (props) => {
                 <h2 className="text-3xl lg:text-5xl lg:leading-normal mb-4 font-bold font-heading wow animate__animated animate__fadeIn">
                   Get Your Website <br />
                   Built by a{" "}
-                  <span className="text-blue-500">Microsoft Engineer</span>
+                  <div className="text-blue-500">Microsoft Engineer</div>
                 </h2>
-                <p className="text-blueGray-400 leading-relaxed wow animate__animated animate__fadeIn">
+                <div className="text-blueGray-400 leading-relaxed wow animate__animated animate__fadeIn">
                   Hey my name is{" "}
                   <strong className="text-blue-500">Fulei</strong>, I can help
                   you with{" "}
@@ -42,7 +53,7 @@ const Home: React.FC<HomeProps> = (props) => {
                       ]}
                     />
                   </strong>
-                </p>
+                </div>
               </div>
               <div>
                 <a
@@ -97,10 +108,10 @@ const Home: React.FC<HomeProps> = (props) => {
                   </svg>
                 </div>
                 <div className="sm:py-2 ml-2 sm:ml-6">
-                  <span className="sm:text-2xl font-bold font-heading">+ </span>
-                  <span className="sm:text-2xl font-bold font-heading count">
+                  <div className="sm:text-2xl font-bold font-heading">+ </div>
+                  <div className="sm:text-2xl font-bold font-heading count">
                     <CounterUp count={45} time={3} />
-                  </span>
+                  </div>
                   <p className="text-xs sm:text-base text-blueGray-400">
                     Annual Partner
                   </p>
@@ -127,14 +138,14 @@ const Home: React.FC<HomeProps> = (props) => {
                   </svg>
                 </div>
                 <div className="sm:py-2 ml-2 sm:ml-6">
-                  <span className="sm:text-2xl font-bold font-heading">+ </span>
-                  <span className="sm:text-2xl font-bold font-heading count">
+                  <div className="sm:text-2xl font-bold font-heading">+ </div>
+                  <div className="sm:text-2xl font-bold font-heading count">
                     <CounterUp count={58} time={3} />
-                  </span>
-                  {/* <span className="sm:text-2xl font-bold font-heading">
+                  </div>
+                  {/* <div className="sm:text-2xl font-bold font-heading">
                     {" "}
                     k{" "}
-                  </span> */}
+                  </div> */}
                   <p className="text-xs sm:text-base text-blueGray-400">
                     Completed Projects
                   </p>
@@ -161,10 +172,10 @@ const Home: React.FC<HomeProps> = (props) => {
                   </svg>
                 </div>
                 <div className="sm:py-2 ml-2 sm:ml-6">
-                  <span className="sm:text-2xl font-bold font-heading">+ </span>
-                  <span className="sm:text-2xl font-bold font-heading count">
+                  <div className="sm:text-2xl font-bold font-heading">+ </div>
+                  <div className="sm:text-2xl font-bold font-heading count">
                     <CounterUp count={500} time={3} />
-                  </span>
+                  </div>
                   <p className="text-xs sm:text-base text-blueGray-400">
                     Happy Customers
                   </p>
@@ -191,10 +202,10 @@ const Home: React.FC<HomeProps> = (props) => {
                   </svg>
                 </div>
                 <div className="sm:py-2 ml-2 sm:ml-6">
-                  <span className="sm:text-2xl font-bold font-heading">+ </span>
-                  <span className="sm:text-2xl font-bold font-heading count">
+                  <div className="sm:text-2xl font-bold font-heading">+ </div>
+                  <div className="sm:text-2xl font-bold font-heading count">
                     <CounterUp count={300} time={3} />
-                  </span>
+                  </div>
                   <p className="text-xs sm:text-base text-blueGray-400">
                     Research Work
                   </p>
@@ -216,12 +227,12 @@ const Home: React.FC<HomeProps> = (props) => {
                   data-wow-delay=".3s"
                 >
                   <div className="mb-4">
-                    <span
+                    <div
                       className="text-xs py-1 px-3 text-blue-500 font-semibold bg-blue-50 rounded-xl wow animate__animated animate__fadeInDown"
                       data-wow-delay=".9s"
                     >
                       Why choose us
-                    </span>
+                    </div>
                     <h2
                       className="text-4xl mt-5 font-bold font-heading wow animate__animated animate__fadeIn"
                       data-wow-delay=".3s"
@@ -358,10 +369,10 @@ const Home: React.FC<HomeProps> = (props) => {
             <div className="flex flex-wrap items-center justify-between max-w-2xl lg:max-w-full mb-12">
               <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
                 <h2 className="text-3xl md:text-4xl font-bold font-heading wow animate__animated animate__fadeInDown">
-                  <span>We are</span>
-                  <span className="text-blue-500"> awesome team</span>
+                  <div>We are</div>
+                  <div className="text-blue-500"> awesome team</div>
                   <br />
-                  <span>for your business dream</span>
+                  <div>for your business dream</div>
                 </h2>
               </div>
               <div className="w-full lg:w-1/2">
@@ -453,7 +464,7 @@ const Home: React.FC<HomeProps> = (props) => {
                     data-wow-delay=".3s"
                   >
                     Simple Solution for{" "}
-                    <span className="text-blue-500">Complex</span> Connections
+                    <div className="text-blue-500">Complex</div> Connections
                   </h2>
                   <p
                     className="text-xs md:text-base text-blueGray-400 leading-loose wow animate__animated animate__fadeIn"
@@ -489,9 +500,9 @@ const Home: React.FC<HomeProps> = (props) => {
                 className="max-w-lg mx-auto mb-4 text-4xl font-bold font-heading wow animate__animated animate__fadeIn"
                 data-wow-delay=".2s"
               >
-                <span>Start saving time today and</span>
-                <span className="text-blue-500"> choose </span>
-                <span>your best plan</span>
+                <div>Start saving time today and</div>
+                <div className="text-blue-500"> choose </div>
+                <div>your best plan</div>
               </h2>
               <p
                 className="max-w-sm mx-auto text-lg text-blueGray-400 wow animate__animated animate__fadeInDown"
@@ -514,9 +525,9 @@ const Home: React.FC<HomeProps> = (props) => {
                   <h3 className="mb-2 text-4xl font-bold font-heading">
                     Startup
                   </h3>
-                  <span className="text-4xl text-blue-500 font-bold font-heading">
+                  <div className="text-4xl text-blue-500 font-bold font-heading">
                     $45.99
-                  </span>
+                  </div>
                   <p className="mt-2 mb-8 text-blueGray-400">user per month</p>
                   <div className="flex flex-col items-center mb-8">
                     <ul className="text-blueGray-400">
@@ -535,7 +546,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>3 Emails</span>
+                        <div>3 Emails</div>
                       </li>
                       <li className="flex mb-3">
                         <svg
@@ -552,7 +563,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>1 Datebases</span>
+                        <div>1 Datebases</div>
                       </li>
                       <li className="flex mb-3">
                         <svg
@@ -569,7 +580,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>Unlimited Domains</span>
+                        <div>Unlimited Domains</div>
                       </li>
                       <li className="flex">
                         <svg
@@ -586,7 +597,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>10 GB Storage</span>
+                        <div>10 GB Storage</div>
                       </li>
                     </ul>
                   </div>
@@ -619,9 +630,7 @@ const Home: React.FC<HomeProps> = (props) => {
                   <h3 className="mb-2 text-4xl font-bold font-heading">
                     Agency
                   </h3>
-                  <span className="text-4xl font-bold font-heading">
-                    $65.99
-                  </span>
+                  <div className="text-4xl font-bold font-heading">$65.99</div>
                   <p className="mt-2 mb-8">user per month</p>
                   <div className="flex flex-col items-center mb-8">
                     <ul>
@@ -640,7 +649,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>6 Emails</span>
+                        <div>6 Emails</div>
                       </li>
                       <li className="flex items-center mb-3">
                         <svg
@@ -657,7 +666,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>4 Datebases</span>
+                        <div>4 Datebases</div>
                       </li>
                       <li className="flex items-center mb-3">
                         <svg
@@ -674,7 +683,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>Unlimited Domains</span>
+                        <div>Unlimited Domains</div>
                       </li>
                       <li className="flex items-center">
                         <svg
@@ -691,7 +700,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>35 GB Storage</span>
+                        <div>35 GB Storage</div>
                       </li>
                     </ul>
                   </div>
@@ -724,9 +733,9 @@ const Home: React.FC<HomeProps> = (props) => {
                   <h3 className="mb-2 text-4xl font-bold font-heading">
                     Enterprise
                   </h3>
-                  <span className="text-4xl text-blue-500 font-bold font-heading">
+                  <div className="text-4xl text-blue-500 font-bold font-heading">
                     $85.99
-                  </span>
+                  </div>
                   <p className="mt-2 mb-8 text-blueGray-400">user per month</p>
                   <div className="flex flex-col items-center mb-8">
                     <ul className="text-blueGray-400">
@@ -745,7 +754,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>12 Emails</span>
+                        <div>12 Emails</div>
                       </li>
                       <li className="flex mb-3">
                         <svg
@@ -762,7 +771,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>8 Datebases</span>
+                        <div>8 Datebases</div>
                       </li>
                       <li className="flex mb-3">
                         <svg
@@ -779,7 +788,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>Unlimited Domains</span>
+                        <div>Unlimited Domains</div>
                       </li>
                       <li className="flex">
                         <svg
@@ -796,7 +805,7 @@ const Home: React.FC<HomeProps> = (props) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           ></path>
                         </svg>
-                        <span>50 GB Storage</span>
+                        <div>50 GB Storage</div>
                       </li>
                     </ul>
                   </div>
@@ -827,9 +836,9 @@ const Home: React.FC<HomeProps> = (props) => {
             <div className="relative py-20 px-4 lg:p-20">
               <div className="max-w-lg mx-auto text-center">
                 <h2 className="mb-4 text-3xl lg:text-4xl font-bold font-heading wow animate__animated animate__fadeIn">
-                  <span>Subscribe now to</span>
-                  <span className="text-blue-500"> Our Newsletter </span>
-                  <span>and get the Coupon code.</span>
+                  <div>Subscribe now to</div>
+                  <div className="text-blue-500"> Our Newsletter </div>
+                  <div>and get the Coupon code.</div>
                 </h2>
                 <p
                   className="mb-8 text-blueGray-400 wow animate__animated animate__fadeIn"

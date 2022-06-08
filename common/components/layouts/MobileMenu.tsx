@@ -70,7 +70,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = (props) => {
                 }
                 onClick={() => handleToggle(1)}
               >
-                <span className="menu-expand">+</span>
+                <div className="menu-expand">+</div>
                 <Link href="#">
                   <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl">
                     Home
@@ -157,7 +157,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = (props) => {
                 }
                 onClick={() => handleToggle(2)}
               >
-                <span className="menu-expand">+</span>
+                <div className="menu-expand">+</div>
                 <Link href="#">
                   <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">
                     Blog

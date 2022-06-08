@@ -138,7 +138,7 @@ export const Slider1: React.FC<Slider1Props> = (props) => {
       </Swiper>
 
       <div id="carausel-2-columns-1-arrows" className="flex">
-        <span className="mr-4 text-blue-500 flex slick-arrow custom_prev">
+        <div className="mr-4 text-blue-500 flex slick-arrow custom_prev">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -153,8 +153,8 @@ export const Slider1: React.FC<Slider1Props> = (props) => {
               d="M7 16l-4-4m0 0l4-4m-4 4h18"
             ></path>
           </svg>
-        </span>
-        <span className="text-blue-500 flex slick-arrow custom_next">
+        </div>
+        <div className="text-blue-500 flex slick-arrow custom_next">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -169,7 +169,7 @@ export const Slider1: React.FC<Slider1Props> = (props) => {
               d="M17 8l4 4m0 0l-4 4m4-4H3"
             ></path>
           </svg>
-        </span>
+        </div>
       </div>
     </>
   );
